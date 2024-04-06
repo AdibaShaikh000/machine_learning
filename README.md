@@ -36,23 +36,24 @@ The objective is to create a classifier that determines if an individual's yearl
 
 
 ## Data Visualization
+### Income Class analysis
 ![Income Class Distribution](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/data_visualization/distribution_of_income_class.PNG)
 - There exists a noticeable contrast between the two categories.
 - The majority of the dataset (75.1%) corresponds to incomes below $50K.
 - The remaining 24.9% pertains to individuals earning over $50K per year.
 - The skewed distribution of income classes might adversely affect model performance
 
-
+### Hours per week analysis
 ![Hours per week box plot](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/data_visualization/box_plot_of_hours_per_week.PNG)
 - The "hours-per-week" feature shows considerable variability with a standard deviation of around 12.35 hours
 - The minimum value of 1 hour and maximum value of 99 hours indicates the presence of outliers
 
-
+### Age analysis
 ![Income distribution by Age](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/data_visualization/income_distribution_by_age.PNG)
 - Income tends to be lower at the starting age of the career
 - Beyond the age of 30, there is a significantly increased likelihood of earning more than $50K annually
   
-
+# Correlation 
 ![Correlation Matrix](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/data_visualization/Correlation_matrix.PNG)
 - Income shows strong correlation with education-num, relationship, sex, capital gain, and age group
 - However, correlation is weak for fnlwgt, occupation, and native-country
@@ -82,24 +83,24 @@ Gradient Boosting outperforms the other models
 
 Hyperparameter tuning was conducted using GridSearchCV on the gradient boosting model to optimize its performance. 
 The best parameters obtained were:
-Learning rate: 0.2
-Max depth: 4
-Min samples leaf: 1
-Min samples split: 10
-Number of estimators: 200
+- Learning rate: 0.2
+- Max depth: 4
+- Min samples leaf: 1
+- Min samples split: 10
+- Number of estimators: 200
 
 After hyperparameters, there was a slight increase in the accuracy
 
 
 ## Model Evaluation
 ### Classification Report
-![Classification Report](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_inference/classification_report.PNG)
+![Classification Report](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_evaluation/classification_report.PNG)
 - Due to the imbalanced data, the most suitable evaluation metric is the macro average F1-score, which currently stands at 0.76 with the existing model
-- F1-score for the ">50k" classification is 0.63 due to fewer data points in that class
+- F1-score for the ">50k" classification is 0.68 due to fewer data points in that class
   
 
 ### Confusion Matrix
-![Confusion Matrix](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_inference/confusion_matrix.PNG)
+![Confusion Matrix](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_evaluation/confusion_matrix.PNG)
 
 Summary:
 True Negatives: 6422
@@ -112,7 +113,7 @@ The model's performance in predicting >50K income could be enhanced by reducing 
 
 
 ### ROC Curve
-![ROC Curve](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_inference/roc_curve.PNG)
+![ROC Curve](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_evaluation/roc_curve.PNG)
 - The AUC (Area Under the ROC Curve) score is 0.91
 - This indicates that the model has good discriminative ability
 
