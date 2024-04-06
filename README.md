@@ -53,7 +53,7 @@ The objective is to create a classifier that determines if an individual's yearl
 - Income tends to be lower at the starting age of the career
 - Beyond the age of 30, there is a significantly increased likelihood of earning more than $50K annually
   
-# Correlation 
+### Correlation 
 ![Correlation Matrix](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/data_visualization/Correlation_matrix.PNG)
 - Income shows strong correlation with education-num, relationship, sex, capital gain, and age group
 - However, correlation is weak for fnlwgt, occupation, and native-country
@@ -69,7 +69,7 @@ Five models were trained to find the most effective one:
 5) Gradient Boosting
 Repeated Stratified cross-validation with 10 folds and 3 repeated was utilized during training
 
-Comparison Result:
+### Comparison Result
 |         Model         |  Mean Accuracy  |
 |-----------------------|-----------------|
 | SVM                   | 79.65%          |
@@ -80,7 +80,7 @@ Comparison Result:
 
 Gradient Boosting outperforms the other models
 
-
+### Hyperparameter Tuning
 Hyperparameter tuning was conducted using GridSearchCV on the gradient boosting model to optimize its performance. 
 The best parameters obtained were:
 - Learning rate: 0.2
@@ -103,12 +103,11 @@ After hyperparameters, there was a slight increase in the accuracy
 ![Confusion Matrix](https://github.com/AdibaShaikh000/machine_learning/blob/master/resources/model_evaluation/confusion_matrix.PNG)
 
 Summary:
-True Negatives: 6422
-False Positives: 345
-False Negatives: 926
-True Positives: 1356
+- True Negatives: 6422
+- False Positives: 345
+- False Negatives: 926
+- True Positives: 1356
 
-Conclusion:
 The model's performance in predicting >50K income could be enhanced by reducing false negatives
 
 
@@ -118,7 +117,7 @@ The model's performance in predicting >50K income could be enhanced by reducing 
 - This indicates that the model has good discriminative ability
 
 
-## Conclusion
+# Conclusion
 - The model demonstrates reasonable accuracy of 0.86
 - Additional optimization is necessary to correctly identify individuals with higher income levels
 - Addressing the imbalance in class data is crucial for enhancing model performance
